@@ -1,3 +1,8 @@
 .custom-dashboard-page-container{
     max-width: 1750px;
 }
+/* top bar */
+.top-bar{
+    position: sticky;
+    top: 0;
+}

@@ -23,7 +23,7 @@ function Dashboard() {
                     <div className="col p-0 h-100 overflowy-scroll bg-light">
 
 
-                        <div className="row p-2 bg-white w-100 dashboard-topbar">
+                        <div className="row p-2 bg-white m-0 dashboard-topbar">
                             <div className="col-3 d-flex align-items-center ">
                                 <h5 className='m-0'>{name}</h5>
                             </div>

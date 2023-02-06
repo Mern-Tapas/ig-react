@@ -1,6 +1,10 @@
 .sidebar-content li:hover {
     background: #e7e7e7;
 }
+.active{
+    background: #e7e7e7;
+    color: black;
+}
 
 .sidebar-content li:hover>span,
 .sidebar-content li:hover>i {

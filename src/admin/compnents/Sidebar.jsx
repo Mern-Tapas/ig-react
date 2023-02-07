@@ -26,42 +26,42 @@ function Sidebar() {
             <div className='p-2'>
                 <ul className='links'>
                     <Link to=''>
-                        <li className={(page === "") ? "p-2 px-3 rounded-3 active mb-1 fs-7" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-7"}>
+                        <li className={(page === "") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i class="fa-solid fa-table-columns"></i>
                             <span className='ms-2'>Dashboard</span>
                         </li>
                     </Link>
 
                     <Link to='create'>
-                        <li className={(page === "create") ? "p-2 px-3 rounded-3 active mb-1 fs-7" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-7"}>
+                        <li className={(page === "create") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i class="fa-solid fa-square-plus"></i>
                             <span className="ms-2">Create</span>
                         </li>
                     </Link>
 
                     <Link to='files'>
-                        <li className={(page === "files") ? "p-2 px-3 rounded-3 active mb-1 fs-7" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-7"}>
+                        <li className={(page === "files") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i class="fa-solid fa-file"></i>
                             <span className='ms-2'>Files</span>
                         </li>
                     </Link>
 
                     <Link to='users'>
-                        <li className={(page === "users") ? "p-2 px-3 rounded-3 active mb-1 fs-7" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-7"}>
+                        <li className={(page === "users") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i class="fa-solid fa-user"></i>
                             <span className='ms-2'>Users</span>
                         </li>
                     </Link>
 
                     <Link to='setting'>
-                        <li className={(page === "setting") ? "p-2 px-3 rounded-3 active mb-1 fs-7" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-7"}>
+                        <li className={(page === "setting") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i class="fa-solid fa-gear"></i>
                             <span className='ms-2'>Settings</span>
                         </li>
                     </Link>
 
                     <Link to='help'>
-                        <li className={(page === "help") ? "p-2 px-3 rounded-3 active mb-1 fs-7" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-7"}>
+                        <li className={(page === "help") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i class="fa-solid fa-circle-info"></i>
                             <span className='ms-2'>Help</span>
                         </li>
@@ -77,10 +77,10 @@ function Sidebar() {
                     <div className="rounded-pill mx-auto overflow-hidden" style={{ width: "35px", height: "35px" }}>
                         <img src={profile} alt="logo" />
                     </div>
-                    <h6 className='text-center fs-7 mt-2 mb-0'>Tom Crus</h6>
+                    <h6 className='text-center fs-8 mt-2 mb-0'>Tom Crus</h6>
                     <p className='text-center fs-8'>@tomcrus_6</p>
                     <Link to='logout'>
-                        <li className='danger-button p-2 px-3 rounded-3 mb-1 fs-7'>
+                        <li className='danger-button p-2 px-3 rounded-3 mb-1 fs-8'>
                             <i class="fa-solid fa-arrow-right-from-bracket "></i>
                             <span className='ms-2 fw-bold'>Logout</span>
                         </li>

@@ -11,7 +11,7 @@ function Dashboard() {
             <div className='container-fluid '>
                 <div className="row bg-white vh-100 overflow-hidden ">
                     {/* sidebar */}
-                    <div className="col d-xl-block d-none p-0 border-end" style={{ maxWidth: "190px" }}>
+                    <div className="col d-xl-block d-none p-0 border-end" style={{ maxWidth: "170px" }}>
                         <Sidebar />
                     </div>
                     {/* sidebar */}

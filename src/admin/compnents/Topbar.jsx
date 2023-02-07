@@ -19,7 +19,7 @@ function Topbar() {
 
             <div className="col d-md-flex d-none justity-content-center">
                 <form method='post' className='w-100 d-flex'>
-                    <TextField id="input-with-icon-textfield" fullWidth placeholder='Search' size="small" />
+                    <TextField id="input-with-icon-textfield" className='' fullWidth placeholder='Search' size="small" />
                 </form>
             </div>
 

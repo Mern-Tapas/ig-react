@@ -19,16 +19,18 @@ function Dashboard() {
                     {/* body content */}
                     <div className="col p-0 h-100 overflowy-scroll bg-light">
 
+
+
                         {/* topbar */}
                         <Topbar />
                         {/* topbar */}
 
                         {/* pages-content */}
 
-                        <div className="custom-dashboard-page-container mx-auto p-3">
+                        <div className="col custom-dashboard-page-container mx-auto p-2" style={{height:"92%"}}>
                             <Outlet />
                         </div>
-                        
+
                         {/* pages-content */}
                     </div>
                     {/* body content */}

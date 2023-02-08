@@ -21,7 +21,7 @@
 
     .analytics {
         grid-template-columns: repeat(8, minmax(80px, 1fr));
-        grid-template-rows: 200px 250px 400px auto;
+        grid-template-rows: 150px 250px 400px auto;
 
     }
 
@@ -59,7 +59,7 @@
 
 .analytics-count {
     display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
     grid-gap: 10px;
 }
 

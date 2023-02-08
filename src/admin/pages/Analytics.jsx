@@ -1,49 +1,75 @@
 import axios from 'axios'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { Button } from '@mui/material'
+
 import "../../assets/css/analytics.css"
 
 function Analytics() {
 
+  const [leades, setleads] = useState([])
 
+  useEffect(() => {
+    fetchdata()
 
-  const  fetchdata = async ()=>{
-      await axios.get("").then((response)=>{console.log(response)})
+  }, [])
+
+  const fetchdata = async () => {
+    await axios.get("").then((response) => { setleads(response.data.data) })
   }
 
-  fetchdata()
 
   return (
     <div className='analytics d-grid h-100'>
 
       {/* gridchiild */}
       <div className='analytics-count'>
-        <div>f</div>
-        <div>f</div>
-        <div>f</div>
-        <div>f</div>
+        <div>c</div>
+        <div>c</div>
+        <div>c</div>
+        <div>c</div>
       </div>
       {/* gridchiild */}
 
       {/* gridchiild */}
-      <div>d</div>
+      <div></div>
       {/* gridchiild */}
 
       {/* gridchiild */}
-      <div>d</div>
+      <div></div>
       {/* gridchiild */}
 
       {/* gridchiild */}
       <div>
 
         <div className='w-100' style={{ maxHeight: "400px", overflowX: "scroll" }}>
-          <div className='p-2 bg-white' style={{ position: "sticky", top: "0" }}>
+          <div className='p-2 bg-white border-bottom' style={{ position: "sticky", top: "0" ,zIndex:"99"}}>
             <h6 className='m-0'>Leads</h6>
+            
           </div>
 
           {/* leades */}
-          <div className='border p-2'>
-            2
-          </div>
+          {leades.map((data) => {
+            return <div key={data.name} className='border-bottom px-2 mb-2'>
+
+              <div className='p-2 d-flex align-items-center'>
+                <div className='' style={{ width: "150px" }}>
+                  <h6 className='fs-8 m-0 text-capitalize'>{data.service}</h6>
+                </div>
+                <div className='' style={{ width: "200px" }}>
+                  <h6 className='fs-8 m-0 text-capitalize'>{data.name}</h6>
+                </div>
+                <div className='' style={{ width: "200px" }}>
+                  <h6 className='fs-8 m-0 text-capitalize'>{data.contact}</h6>
+                </div>
+                
+                <div className='ms-auto'>
+                  <Button className='ms-2' variant='outlined' color="error" size="small">Delete</Button>
+                  <Button className='ms-2' variant="contained" size="small">view</Button>
+                </div>
+              </div>
+
+            </div>
+          })}
           {/* leades */}
 
         </div>
@@ -53,7 +79,7 @@ function Analytics() {
 
       {/* gridchiild */}
       <div>
-
+          s
       </div>
       {/* gridchiild */}
 

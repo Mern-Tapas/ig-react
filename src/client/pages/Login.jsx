@@ -22,7 +22,7 @@ function Login() {
                 </div>
                 <div className='auto-icons rounded-pill d-flex'>
                   <Link to="/login" className='w-100 h-100 d-flex form-control'>
-                    <i class="fa-brands fa-google m-auto text-secondary"></i>
+                    <i className="fa-brands fa-google m-auto text-secondary"></i>
                   </Link>
                 </div>
                 <div className='auto-icons rounded-pill d-flex'>

@@ -9,7 +9,9 @@ function Analytics() {
   const [leades, setleads] = useState([])
 
   useEffect(() => {
+
     fetchdata()
+
 
   }, [])
 
@@ -17,10 +19,10 @@ function Analytics() {
     await axios.get("").then((response) => { setleads(response.data.data) })
   }
 
-  const deletitem = (id)=>{
-    console.log("running")
-    console.log(id)
-    
+  const deletitem = async (id) => {
+
+    await axios.delete(`dashboard/${id}`).then((response) => { fetchdata() }).catch((error) => { console.log(error) })
+
   }
 
 
@@ -69,7 +71,7 @@ function Analytics() {
                 </div>
 
                 <div className='ms-auto'>
-                  <Button className='ms-2' variant='outlined' color="error" size="small" onClick={()=>{deletitem(data._id)}} >Delete</Button>
+                  <Button className='ms-2' variant='outlined' color="error" size="small" onClick={() => { deletitem(data._id) }} >Delete</Button>
                   <Button className='ms-2' variant="contained" size="small">view</Button>
                 </div>
               </div>

@@ -17,7 +17,7 @@ function Login() {
               <div className='login-by-other d-flex justify-content-between m-auto'>
                 <div className='auto-icons rounded-pill d-flex'>
                   <Link to="/signup" className='w-100 h-100 d-flex form-control'>
-                    <i class="fa-brands fa-facebook-f m-auto text-secondary"></i>
+                    <i className="fa-brands fa-facebook-f m-auto text-secondary"></i>
                   </Link>
                 </div>
                 <div className='auto-icons rounded-pill d-flex'>
@@ -27,7 +27,7 @@ function Login() {
                 </div>
                 <div className='auto-icons rounded-pill d-flex'>
                   <Link to="/login" className='w-100 h-100 d-flex form-control'>
-                    <i class="fa-brands fa-twitter  m-auto text-secondary"></i>
+                    <i className="fa-brands fa-twitter  m-auto text-secondary"></i>
                   </Link>
                 </div>
               </div>

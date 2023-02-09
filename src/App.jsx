@@ -31,7 +31,6 @@ function App() {
           <Route path='users' element={<Users />} />
           <Route path='setting' element={<Setting />} />
           <Route path='help' element={<Help />} />
-          {/* comment */}
         </Route>
       </Routes>
     </BrowserRouter>

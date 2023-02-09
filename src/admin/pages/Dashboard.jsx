@@ -27,7 +27,7 @@ function Dashboard() {
 
                         {/* pages-content */}
 
-                        <div className="col custom-dashboard-page-container mx-auto p-2" style={{height:"92%"}}>
+                        <div className="col custom-dashboard-page-container mx-auto p-2" style={{minHeight:"92%"}}>
                             <Outlet />
                         </div>
 

@@ -21,7 +21,7 @@
 
     .analytics {
         grid-template-columns: repeat(8, minmax(80px, 1fr));
-        grid-template-rows: 150px 250px 400px auto;
+        grid-template-rows: 150px 250px 430px auto;
 
     }
 

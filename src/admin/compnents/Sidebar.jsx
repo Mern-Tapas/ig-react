@@ -27,14 +27,14 @@ function Sidebar() {
                 <ul className='links'>
                     <Link to=''>
                         <li className={(page === "") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
-                            <i class="fa-solid fa-table-columns"></i>
+                            <i className="fa-solid fa-table-columns"></i>
                             <span className='ms-2'>Dashboard</span>
                         </li>
                     </Link>
 
                     <Link to='create'>
                         <li className={(page === "create") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
-                            <i class="fa-solid fa-square-plus"></i>
+                            <i className="fa-solid fa-square-plus"></i>
                             <span className="ms-2">Create</span>
                         </li>
                     </Link>
@@ -48,28 +48,28 @@ function Sidebar() {
 
                     <Link to='files'>
                         <li className={(page === "files") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
-                            <i class="fa-solid fa-file"></i>
+                            <i className="fa-solid fa-file"></i>
                             <span className='ms-2'>Files</span>
                         </li>
                     </Link>
 
                     <Link to='users'>
                         <li className={(page === "users") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
-                            <i class="fa-solid fa-user"></i>
+                            <i className="fa-solid fa-user"></i>
                             <span className='ms-2'>Users</span>
                         </li>
                     </Link>
 
                     <Link to='setting'>
                         <li className={(page === "setting") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
-                            <i class="fa-solid fa-gear"></i>
+                            <i className="fa-solid fa-gear"></i>
                             <span className='ms-2'>Settings</span>
                         </li>
                     </Link>
 
                     <Link to='help'>
                         <li className={(page === "help") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
-                            <i class="fa-solid fa-circle-info"></i>
+                            <i className="fa-solid fa-circle-info"></i>
                             <span className='ms-2'>Help</span>
                         </li>
                     </Link>
@@ -88,7 +88,7 @@ function Sidebar() {
                     <p className='text-center fs-8'>@tomcrus_6</p>
                     <Link to='logout'>
                         <li className='danger-button p-2 px-3 rounded-3 mb-1 fs-8'>
-                            <i class="fa-solid fa-arrow-right-from-bracket "></i>
+                            <i className="fa-solid fa-arrow-right-from-bracket "></i>
                             <span className='ms-2 fw-bold'>Logout</span>
                         </li>
                     </Link>

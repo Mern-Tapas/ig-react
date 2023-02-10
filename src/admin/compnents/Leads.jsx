@@ -1,7 +1,5 @@
 import React from 'react'
-import { Outlet } from 'react-router-dom'
 import "../../assets/css/leads.css"
-import LeadsItems from '../compnents/LeadsItems'
 
 function Leads() {
   return (
@@ -9,11 +7,10 @@ function Leads() {
       <div >
 
       </div>
-      <div style={{overflow:"scroll"}}>
-        <LeadsItems/>
+      <div style={{ overflow: "scroll" }}>
+
       </div>
       <div >
-        <Outlet/>
       </div>
     </div>
   )

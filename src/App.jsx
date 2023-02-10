@@ -25,7 +25,7 @@ function App() {
           <Route path='' element={<Analytics />} />
           <Route path='create' element={<Create />} />
           <Route path='leads' element={<Leads />} >
-            <Route path='*' ></Route>
+
           </Route>
           <Route path='files' element={<Files />} />
           <Route path='users' element={<Users />} />

@@ -9,8 +9,8 @@ function Sidebar() {
 
     const location = useLocation();
     const name = location.pathname;
-    const page = name.slice(11)
-
+    const page = name.split('/')
+    const pagename = page[2]
 
     return (
         <div className="sidebar-content d-flex flex-column h-100">
@@ -26,49 +26,49 @@ function Sidebar() {
             <div className='p-2'>
                 <ul className='links'>
                     <Link to=''>
-                        <li className={(page === "") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
+                        <li className={(pagename === "") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i className="fa-solid fa-table-columns"></i>
                             <span className='ms-2'>Dashboard</span>
                         </li>
                     </Link>
 
                     <Link to='create'>
-                        <li className={(page === "create") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
+                        <li className={(pagename === "create") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i className="fa-solid fa-square-plus"></i>
                             <span className="ms-2">Create</span>
                         </li>
                     </Link>
 
                     <Link to='leads'>
-                        <li className={(page === "leads") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
+                        <li className={(pagename === "leads") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i class="fa-solid fa-square-plus"></i>
                             <span className="ms-2">Leads</span>
                         </li>
                     </Link>
 
                     <Link to='files'>
-                        <li className={(page === "files") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
+                        <li className={(pagename === "files") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i className="fa-solid fa-file"></i>
                             <span className='ms-2'>Files</span>
                         </li>
                     </Link>
 
                     <Link to='users'>
-                        <li className={(page === "users") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
+                        <li className={(pagename === "users") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i className="fa-solid fa-user"></i>
                             <span className='ms-2'>Users</span>
                         </li>
                     </Link>
 
                     <Link to='setting'>
-                        <li className={(page === "setting") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
+                        <li className={(pagename === "setting") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i className="fa-solid fa-gear"></i>
                             <span className='ms-2'>Settings</span>
                         </li>
                     </Link>
 
                     <Link to='help'>
-                        <li className={(page === "help") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
+                        <li className={(pagename === "help") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i className="fa-solid fa-circle-info"></i>
                             <span className='ms-2'>Help</span>
                         </li>

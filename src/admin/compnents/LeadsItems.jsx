@@ -6,7 +6,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { Button } from '@mui/material';
+import { Button, Skeleton } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 function LeadsItems() {
@@ -45,6 +45,7 @@ function LeadsItems() {
                             <TableCell align="right">Salary</TableCell>
                             <TableCell align="right">Email</TableCell>
                             <TableCell align="right">Protein&nbsp;(g)</TableCell>
+                            <TableCell align="right">Protein&nbsp;(g)</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -52,14 +53,12 @@ function LeadsItems() {
                             <TableRow
                                 key={row.name}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                            >
-                                <TableCell component="th" scope="row">
-                                    {row.name}
-                                </TableCell>
-                                <TableCell align="right">{row.calories}</TableCell>
-                                <TableCell align="right">{row.fat}</TableCell>
-                                <TableCell align="right">{row.carbs}</TableCell>
-                                <TableCell align="right" className='d-flex'> <p className='ms-auto my-auto p-1 px-2 rounded-pill button-red'>verified</p> </TableCell>
+                            >   <TableCell component="th" scope="row">{row.name?row.name:<Skeleton/>}</TableCell>
+                                <TableCell component="th" scope="row">{row.name?row.name:<Skeleton/>}</TableCell>
+                                <TableCell align="right">{row.calories?row.calories:<Skeleton/>}</TableCell>
+                                <TableCell align="right">{row.fat?row.fat:<Skeleton/>}</TableCell>
+                                <TableCell align="right">{row.name?row.name:<Skeleton/>}</TableCell>
+                                <TableCell align="right" className='d-flex'>{row.name?<p className='ms-auto my-auto p-1 px-2 rounded-pill button-red'>verified</p>:<Skeleton/>}  </TableCell>
                                 <TableCell align="right">
                                     <Link to="656468656">
                                         <Button className='ms-2' variant="contained" size="small">view</Button>

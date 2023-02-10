@@ -7,14 +7,15 @@ function Topbar() {
 
     const location = useLocation();
     const name = location.pathname;
-    const page = name.slice(11)
+    const page = name.split('/')
+    const pagename = page[2]
 
 
     return (
         <div className="row p-2 bg-white m-0 dashboard-topbar border-bottom top-bar" style={{height:"fit-content",zIndex:"100"}}>
 
             <div className="col-3 d-flex align-items-center ">
-                {page ? <h5 className='m-0 text-capitalize'>{page}</h5> : <h5 className='m-0 text-capitalize'>Analytics</h5>}
+                {pagename ? <h5 className='m-0 text-capitalize'>{pagename}</h5> : <h5 className='m-0 text-capitalize'>Analytics</h5>}
             </div>
 
             <div className="col d-md-flex d-none justity-content-center">

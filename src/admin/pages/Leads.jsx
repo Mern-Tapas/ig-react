@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import "../../assets/css/leads.css"
+import instance from '../../axios'
 
 function Leads() {
 
@@ -22,6 +23,12 @@ function Leads() {
       console.log(error)
     })
 
+  }
+
+  const [lead, setlead] = useState({})
+
+  const getdata = async (id) => {
+    await axios.get(`leads/${id}`).then((response) => { console.log(response) }).catch((error) => { console.log(error) })
   }
 
 
@@ -52,10 +59,10 @@ function Leads() {
                 return <tr>
                   <td >{data.service}</td>
                   <td >{data.name}</td>
-                  <td >{}</td>
+                  <td >{data.name}</td>
                   <td >Handle</td>
                   <td >Handle</td>
-                  <td >Handle</td>
+                  <td><button onClick={() => { getdata(data._id) }}>View</button></td>
                 </tr>
               })}
             </tbody>

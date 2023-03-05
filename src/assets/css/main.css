@@ -77,17 +77,27 @@ li {
 img {
     height: 100%;
     width: 100%;
-    object-fit: cover;  
+    object-fit: cover;
 }
 
-.content-section{
+.content-section {
     min-height: 700px;
 }
-.button-green{
+
+.button-green {
     background: rgba(94, 255, 94, 0.1);
     color: rgb(8, 193, 8);
 }
-.button-red{
+
+.button-red {
     background: rgba(255, 94, 94, 0.1);
     color: rgb(193, 8, 8);
+}
+
+
+
+@media only screen and (max-width:1925px) {
+    .content-section {
+        min-height: 100vh;
+    }
 }

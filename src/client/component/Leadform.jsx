@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
 import { TextField } from '@mui/material'
 import { FormControl } from '@mui/material'
@@ -12,6 +12,8 @@ import axios from 'axios'
 function Leadform() {
 
 
+
+
     const [formdata, setformdata] = useState({
         service: "",
         loantype: "",
@@ -21,6 +23,13 @@ function Leadform() {
         name: "",
         contact: ""
     })
+
+    useEffect(() => {
+        console.log("reset all data")
+        formdata.loantype = ""
+
+    }, [formdata.service])
+
 
 
     const [otpdata, setotp] = useState({

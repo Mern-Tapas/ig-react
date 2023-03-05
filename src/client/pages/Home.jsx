@@ -22,7 +22,6 @@ function Home() {
             <div className="container-xxl h-100">
               <div className="row  h-100" >
                 <div className="p-2 col-xl-6 d-flex ">
-
                   <div className='m-auto'>
                   </div>
 
@@ -38,7 +37,7 @@ function Home() {
         </div>
 
         <div className="row content-section">
-
+          <img src="/img.jpg" alt="" />
         </div>
 
 

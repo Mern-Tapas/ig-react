@@ -1,8 +1,38 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import image from "../../assets/images/background2.jpg"
+import instance from '../../instance'
 
 function Signup() {
+
+  const location = useLocation().pathname
+
+  const [registration, setregistration] = useState(
+    {
+      name: "",
+      contact: "",
+      email: "",
+      password: "",
+      cpassword: "",
+    }
+  )
+
+
+  const inputhandler = (e) => {
+    const { name, value } = e.target
+
+    setregistration((pre) => {
+      return { ...pre, [name]: value }
+    })
+  }
+
+  const register = (event) => {
+    event.preventDefault()
+    instance.post(location,registration).then((response)=>{console.log(response)}).catch((error)=>{console.log(error)})
+  }
+
+
+
   return (
     <>
       <div className="container-fluid">
@@ -32,15 +62,15 @@ function Signup() {
                 </div>
               </div>
               <p className='mt-4 text-center text-capitalize text-secondary'>stay updated on your professional world</p>
-              <form className='w-100'>
-                <input type="text" placeholder='Alex Walker' className='w-100 p-2 px-3 border mb-3 form-control' />
-                <input type="number" placeholder='+91 9922665454' className='w-100 p-2 px-3 border mb-3 form-control' />
-                <input type="text" placeholder='example@email.com' className='w-100 p-2 px-3 border mb-3 form-control' />
-                <input type="password" placeholder='Password' className='w-100 p-2 px-3 border mb-3 form-control' />
-                <input type="cpassword" placeholder='Confirm Password' className='w-100 p-2 px-3 border mb-3 form-control' />
-                <p className='mx-2  text-capitalize fw-bold'><Link to="/resetyourpassword" >forgot your password?</Link></p>
+              <form onSubmit={register} className='w-100'>
+                <input onChange={inputhandler} name='name' type="text" placeholder='Alex Walker' className='w-100 p-2 px-3 border mb-3 form-control' />
+                <input onChange={inputhandler} name='contact' type="number" placeholder='+91 9922665454' className='w-100 p-2 px-3 border mb-3 form-control' />
+                <input onChange={inputhandler} name='email' type="text" placeholder='example@email.com' className='w-100 p-2 px-3 border mb-3 form-control' />
+                <input onChange={inputhandler} name='password' type="password" placeholder='Password' className='w-100 p-2 px-3 border mb-3 form-control' />
+                <input onChange={inputhandler} name='cpassword' type="password" placeholder='Confirm Password' className='w-100 p-2 px-3 border mb-3 form-control' />
+                <p className='mx-2  text-capitalize'><Link to="/resetyourpassword" >forgot your password?</Link></p>
                 <div className='d-flex'>
-                  <button className='py-2 mx-auto px-5 btn btn-primary w-100'>Sign Up</button>
+                  <button type="submit" className='py-2 mx-auto px-5 btn btn-primary w-100'>Sign Up</button>
                 </div>
               </form>
             </div>

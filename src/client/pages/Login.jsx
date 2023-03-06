@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import image from "../../assets/images/background.jpg"
 import instance from '../../instance'
 
 function Login() {
 
+  const location = useLocation()
 
   const [userdetails, setdetails] = useState({ email: "", password: "" })
 
@@ -19,7 +20,7 @@ function Login() {
 
   const login = async (event) => {
     event.preventDefault()
-    await instance.post("login", userdetails).then((response) => { }).catch((error) => { console.log(error) })
+    await instance.post(location.pathname, userdetails).then((response) => { }).catch((error) => { console.log(error) })
   }
 
 

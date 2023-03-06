@@ -1,8 +1,29 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import image from "../../assets/images/background.jpg"
+import instance from '../../instance'
 
 function Login() {
+
+  const location = useLocation()
+
+  const [userdetails, setdetails] = useState({ email: "", password: "" })
+
+  const inputhandler = (e) => {
+    const { name, value } = e.target
+
+    setdetails((predata) => {
+      return { ...predata, [name]: value }
+    })
+  }
+
+
+  const login = async (event) => {
+    event.preventDefault()
+    await instance.post(location.pathname, userdetails).then((response) => { }).catch((error) => { console.log(error) })
+  }
+
+
   return (
     <>
       <div className="container-fluid">
@@ -32,14 +53,12 @@ function Login() {
                 </div>
               </div>
               <p className='mt-4 text-center text-capitalize text-secondary'>stay updated on your professional world</p>
-              <form method='post' className='w-100'>
-                <input type="text" placeholder='example@email.com' className='w-100 p-2 px-3 border mb-3 form-control' />
-                <input type="password" placeholder='Password' className='w-100 p-2 px-3 border mb-3 form-control' />
+              <form onSubmit={login} className='w-100'>
+                <input onChange={inputhandler} name='email' type="email" placeholder='example@email.com' className='w-100 p-2 px-3 border mb-3 form-control' />
+                <input onChange={inputhandler} name='password' type="password" placeholder='Password' className='w-100 p-2 px-3 border mb-3 form-control' />
                 <p className='mx-2  text-capitalize fw-bold'><Link to="/resetyourpassword" >forgot your password?</Link></p>
                 <div className='d-flex'>
-                  <Link to="/dashboard" className='w-100'>
-                    <button className='py-2 mx-auto px-5 btn btn-primary  w-100'>Login</button>
-                  </Link>
+                  <button className='py-2 mx-auto px-5 btn btn-primary  w-100'>Login</button>
                 </div>
               </form>
             </div>

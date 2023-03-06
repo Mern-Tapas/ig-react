@@ -32,7 +32,9 @@ function Signup() {
                 </div>
               </div>
               <p className='mt-4 text-center text-capitalize text-secondary'>stay updated on your professional world</p>
-              <form method='post' className='w-100'>
+              <form className='w-100'>
+                <input type="text" placeholder='Alex Walker' className='w-100 p-2 px-3 border mb-3 form-control' />
+                <input type="number" placeholder='+91 9922665454' className='w-100 p-2 px-3 border mb-3 form-control' />
                 <input type="text" placeholder='example@email.com' className='w-100 p-2 px-3 border mb-3 form-control' />
                 <input type="password" placeholder='Password' className='w-100 p-2 px-3 border mb-3 form-control' />
                 <input type="cpassword" placeholder='Confirm Password' className='w-100 p-2 px-3 border mb-3 form-control' />

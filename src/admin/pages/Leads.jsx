@@ -12,6 +12,8 @@ function Leads() {
     getleads()
   }, [])
 
+  //comments
+
 
   const getleads = async () => {
 
@@ -52,7 +54,7 @@ function Leads() {
                 return <tr>
                   <td >{data.service}</td>
                   <td >{data.name}</td>
-                  <td >{}</td>
+                  <td >{ }</td>
                   <td >Handle</td>
                   <td >Handle</td>
                   <td >Handle</td>

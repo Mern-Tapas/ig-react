@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
+import instance from '../../instance';
 import Sidebar from '../compnents/Sidebar'
 import Topbar from '../compnents/Topbar';
 
 function Dashboard() {
+
+    useEffect(() => {
+        instance.get("/dashboard").then((response)=>{console.log(response)}).catch((error)=>{console.log(error)})
+
+    }, [])
 
 
     return (
@@ -27,7 +33,7 @@ function Dashboard() {
 
                         {/* pages-content */}
 
-                        <div className="col custom-dashboard-page-container mx-auto p-2" style={{minHeight:"92%"}}>
+                        <div className="col custom-dashboard-page-container mx-auto p-2" style={{ minHeight: "92%" }}>
                             <Outlet />
                         </div>
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import "../../assets/css/leads.css"
-import instance from '../../axios'
+import instance from '../../instance'
 
 function Leads() {
 
@@ -18,7 +18,7 @@ function Leads() {
 
   const getleads = async () => {
 
-    await axios.get('').then((response) => {
+    await instance.get('/dashboard').then((response) => {
       console.log(response.data.data)
       setleads(response.data.data)
     }).catch((error) => {

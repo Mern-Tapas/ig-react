@@ -30,12 +30,12 @@ function Signup() {
   const register = (event) => {
     event.preventDefault()
     instance.post(location, registration).then((response) => {
-        if(response.data.validation){
-          navigate("/dashboard")
-        }
-        else{
-          
-        }
+      if (response.data.validation) {
+        navigate("/dashboard")
+      }
+      else {
+
+      }
     }).catch((error) => { console.log(error) })
   }
 

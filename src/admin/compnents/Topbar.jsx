@@ -14,7 +14,6 @@ function Topbar() {
 
     return (
         <div className="row p-2 bg-white m-0 dashboard-topbar border-bottom top-bar" style={{ height: "fit-content", zIndex: "100" }}>
-            <p>{name}</p>
             <div className="col-3 d-flex align-items-center ">
                 {pagename ? <h5 className='m-0 text-capitalize'>{pagename}</h5> : <h5 className='m-0 text-capitalize'>Analytics</h5>}
             </div>

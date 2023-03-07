@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link, useLocation, useNavigate, } from 'react-router-dom'
 import image from "../../assets/images/background2.jpg"
 import instance from '../../instance'
 
 function Signup() {
 
-  const location = useLocation().pathname
+  const navigate = useNavigate()
 
+  const location = useLocation().pathname
   const [registration, setregistration] = useState(
     {
       name: "",
@@ -28,7 +29,14 @@ function Signup() {
 
   const register = (event) => {
     event.preventDefault()
-    instance.post(location,registration).then((response)=>{console.log(response)}).catch((error)=>{console.log(error)})
+    instance.post(location, registration).then((response) => {
+        if(response.data.validation){
+          navigate("/dashboard")
+        }
+        else{
+          
+        }
+    }).catch((error) => { console.log(error) })
   }
 
 

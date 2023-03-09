@@ -45,8 +45,8 @@ function Leads() {
       </div>
       <div style={{ overflow: "scroll" }}>
         <div>
-          <table class="table">
-            <thead class="thead-dark">
+          <table className="table">
+            <thead className="thead-dark">
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">First</th>

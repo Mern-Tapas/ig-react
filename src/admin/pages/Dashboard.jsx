@@ -1,16 +1,23 @@
 import React, { useEffect } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import instance from '../../instance';
 import Sidebar from '../compnents/Sidebar'
 import Topbar from '../compnents/Topbar';
 
 function Dashboard() {
+    const navigate = useNavigate()
 
     useEffect(() => {
-        instance.get("/dashboard").then((response)=>{console.log(response)}).catch((error)=>{console.log(error)})
+        instance.get("/dashboard").then((response) => {
+            if (response.data.validation) {
+                navigate('/dashboard')
+                console.log(response.data.validation)
+            } else if (response.data.validation === false) {
+                navigate('/signup')
+            }
+        }).catch((error) => { console.log(error) })
 
     }, [])
-
 
     return (
         <>

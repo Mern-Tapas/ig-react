@@ -6,24 +6,6 @@ import "../../assets/css/analytics.css"
 
 function Analytics() {
 
-  const [leades, setleads] = useState([])
-
-  useEffect(() => {
-
-    fetchdata()
-
-
-  }, [])
-
-  const fetchdata = async () => {
-    await axios.get("").then((response) => { setleads(response.data.data) })
-  }
-
-  const deletitem = async (id) => {
-
-    await axios.delete(`dashboard/${id}`).then((response) => { fetchdata() }).catch((error) => { console.log(error) })
-
-  }
 
 
   return (
@@ -56,28 +38,7 @@ function Analytics() {
           </div>
 
           {/* leades */}
-          {leades.map((data) => {
-            return <div key={data._id} className='border-bottom px-2 mb-2'>
 
-              <div className='p-2 d-flex align-items-center'>
-                <div className='' style={{ width: "150px" }}>
-                  <h6 className='fs-8 m-0 text-capitalize'>{data.service}</h6>
-                </div>
-                <div className='' style={{ width: "200px" }}>
-                  <h6 className='fs-8 m-0 text-capitalize'>{data.name}</h6>
-                </div>
-                <div className='' style={{ width: "200px" }}>
-                  <h6 className='fs-8 m-0 text-capitalize'>{data.contact}</h6>
-                </div>
-
-                <div className='ms-auto'>
-                  <Button className='ms-2' variant='outlined' color="error" size="small" onClick={() => { deletitem(data._id) }} >Delete</Button>
-                  <Button className='ms-2' variant="contained" size="small">view</Button>
-                </div>
-              </div>
-
-            </div>
-          })}
           {/* leades */}
 
         </div>

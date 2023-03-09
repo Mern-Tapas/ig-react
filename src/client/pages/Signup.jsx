@@ -2,6 +2,9 @@ import React, { useState } from 'react'
 import { Link, useLocation, useNavigate, } from 'react-router-dom'
 import image from "../../assets/images/background2.jpg"
 import instance from '../../instance'
+import Cookies from 'js-cookie'
+
+
 
 function Signup() {
 
@@ -31,6 +34,7 @@ function Signup() {
     event.preventDefault()
     instance.post(location, registration).then((response) => {
       if (response.data.validation) {
+        localStorage.setItem("token", response.data.token)
         navigate("/dashboard")
       }
       else {

@@ -38,7 +38,7 @@ function Signup() {
         navigate("/dashboard")
       }
       else {
-
+        navigate('/login')
       }
     }).catch((error) => { console.log(error) })
   }

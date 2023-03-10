@@ -39,13 +39,6 @@ function Sidebar() {
                         </li>
                     </Link>
 
-                    <Link to='leads'>
-                        <li className={(pagename === "leads") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
-                            <i class="fa-solid fa-square-plus"></i>
-                            <span className="ms-2">Leads</span>
-                        </li>
-                    </Link>
-
                     <Link to='files'>
                         <li className={(pagename === "files") ? "p-2 px-3 rounded-3 active mb-1 fs-8" : "p-2 px-3 rounded-3 text-secondary mb-1 fs-8"}>
                             <i className="fa-solid fa-file"></i>

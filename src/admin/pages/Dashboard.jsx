@@ -8,12 +8,17 @@ function Dashboard() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        instance.get("/dashboard").then((response) => {
-            if (response.data.validation) {
-                navigate('/dashboard')
-                console.log(response.data.validation)
-            } else if (response.data.validation === false) {
-                navigate('/signup')
+        instance.get("/dashboard", {
+            headers: {
+                'Content-Type': 'application/json',
+                'x-access-token': localStorage.getItem("token")
+            }
+        }).then((response) => {
+            if (response.data.validation === false) {
+
+                navigate('/login')
+            } else {
+                navigate("/dashboard")
             }
         }).catch((error) => { console.log(error) })
 

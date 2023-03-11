@@ -3,7 +3,7 @@ import logo from "../../assets/images/logo.jpg"
 import profile from "../../assets/images/profile.jpg"
 import { Link } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
-
+import instance from '../../instance'
 function Sidebar() {
 
 
@@ -11,6 +11,17 @@ function Sidebar() {
     const name = location.pathname;
     const page = name.split('/')
     const pagename = page[2]
+
+
+    const logout = () => {
+
+        instance.get(`/dashboard/logout`).then((response) => {
+            console.log(response.data)
+        }).catch((error) => {
+            console.log(`logout route error react ${error}`)
+        })
+
+    }
 
     return (
         <div className="sidebar-content d-flex flex-column h-100">
@@ -79,7 +90,7 @@ function Sidebar() {
                     </div>
                     <h6 className='text-center fs-8 mt-2 mb-0'>Tom Crus</h6>
                     <p className='text-center fs-8'>@tomcrus_6</p>
-                    <Link to='logout'>
+                    <Link onClick={logout} >
                         <li className='danger-button p-2 px-3 rounded-3 mb-1 fs-8'>
                             <i className="fa-solid fa-arrow-right-from-bracket "></i>
                             <span className='ms-2 fw-bold'>Logout</span>

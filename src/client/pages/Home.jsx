@@ -1,9 +1,8 @@
 import React from 'react'
-import Footer from '../component/Footer'
-import Navbar from '../component/Navbar'
-import LandingImage from '../component/LandingImage'
+import Footer from '../components/Footer'
+import Navbar from '../components/Navbar'
 import image from '../../assets/images/background3.jpg'
-import Leadform from '../component/Leadform'
+import Leadform from '../components/Leadform'
 
 
 function Home() {

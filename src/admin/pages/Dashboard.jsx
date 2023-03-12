@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import instance from '../../instance';
-import Sidebar from '../compnents/Sidebar'
-import Topbar from '../compnents/Topbar';
+import Sidebar from '../components/Sidebar'
+import Topbar from '../components/Topbar';
 
 function Dashboard() {
     const navigate = useNavigate()

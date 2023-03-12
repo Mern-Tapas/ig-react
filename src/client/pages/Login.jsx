@@ -25,6 +25,8 @@ function Login() {
       if (response.data.validation) {
         navigate("/dashboard")
         localStorage.setItem("token", response.data.token)
+      } else {
+        console.log(response.data.massage)
       }
 
     }).catch((error) => { console.log(error) })

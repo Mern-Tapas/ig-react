@@ -10,6 +10,7 @@ import Files from './admin/pages/Files'
 import Users from './admin/pages/Users'
 import Setting from './admin/pages/Setting'
 import Help from './admin/pages/Help'
+import ClientDashboard from './client/pages/ClientDashboard'
 
 
 
@@ -20,14 +21,22 @@ function App() {
         <Route path='' element={<Home />} ></Route>
         <Route path='login' element={<Login />} ></Route>
         <Route path='Signup' element={<Signup />} ></Route>
-        <Route path='Dashboard' element={<Dashboard />} >
+        <Route path='admin' element={<Dashboard />} >
           <Route path='' element={<Analytics />} />
           <Route path='create' element={<Create />} />
-         
           <Route path='files' element={<Files />} />
           <Route path='users' element={<Users />} />
           <Route path='setting' element={<Setting />} />
           <Route path='help' element={<Help />} />
+        </Route>
+        <Route path='dashboard' element={<ClientDashboard />} >
+          <Route path='' element={<Analytics />} />
+          <Route path='create' element={<Create />} />
+          <Route path='files' element={<Files />} />
+          <Route path='users' element={<Users />} />
+          <Route path='setting' element={<Setting />} />
+          <Route path='help' element={<Help />} />
+
         </Route>
       </Routes>
     </BrowserRouter>
